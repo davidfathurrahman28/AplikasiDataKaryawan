@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, Image, Linking } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Title, Card } from 'react-native-paper';
 import {MaterialIcons, Entypo} from 'react-native-vector-icons';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 
 const Detail = ({navigation, route}) => {
@@ -30,7 +31,7 @@ const Detail = ({navigation, route}) => {
             onPress={()=>{Linking.openURL('tel:${karywan.telp}')}}>
                 <View style={{flexDirection:'row', padding:8}}>
                     {/* <Entypo name="phone" size={32} color="006aff"/> */}
-                    <Text style={styles.teks}>{karyawan.email}</Text>
+                    <Text style={styles.teks}>{karyawan.telp}</Text>
                 </View>
             </Card>
             <Card style={{margin:3}}>
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
     teks:{
         fontSize:15,
         marginTop:3,
-        marginLeft:5
+        marginLeft:5,
+        color:'black'
     }
 });
 export default Detail;

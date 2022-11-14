@@ -1,7 +1,7 @@
 import *as React from'react';
 import { View, Text, StyleSheet, Button, Image, FlatList } from 'react-native';
 import { Card } from 'react-native-paper';
-import karyawan from './Karyawan';
+import karyawan from '../Karyawan';
 
 const Home = ({navigation})=> {
     const [data, setData] =React.useState(karyawan);
